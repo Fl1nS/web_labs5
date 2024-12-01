@@ -1,4 +1,3 @@
-// Імпортуємо функції API
 import { getAllCars, postCar, updateCar, deleteCar } from './api.js';
 
 const EDIT_BUTTON_PREFIX = 'edit-button-';

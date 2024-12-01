@@ -1,5 +1,5 @@
 const BASE_URL = "http://localhost:1337/api";
-const RESOURCE_URL = `${BASE_URL}/cars`; // URL для роботи з машинами
+const RESOURCE_URL = `${BASE_URL}/cars`;
 
 const baseRequest = async ({ urlPath = "", method = "GET", body = null }) => {
   try {
@@ -29,16 +29,12 @@ const baseRequest = async ({ urlPath = "", method = "GET", body = null }) => {
 
 
 
-// Отримати всі машини
 export const getAllCars = () => baseRequest({ method: "GET" });
 
-// Додати нову машину
 export const postCar = (body) => baseRequest({ method: "POST", body });
 
-// Оновити машину за ID
 export const updateCar = (id, body) =>
   baseRequest({ urlPath: `/${id}`, method: "PATCH", body });
 
-// Видалити машину за ID
 export const deleteCar = (id) =>
   baseRequest({ urlPath: `/${id}`, method: "DELETE" });
